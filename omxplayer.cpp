@@ -789,7 +789,7 @@ int main(int argc, char *argv[])
         break;
       case subtitles_opt:
         m_external_subtitles_path = optarg;
-        m_has_external_subtitles = true;
+        m_has_external_subtitles = false;
         break;
       case lines_opt:
         m_subtitle_lines = std::max(atoi(optarg), 1);
@@ -975,7 +975,7 @@ int main(int argc, char *argv[])
     if(Exists(subtitles_path))
     {
       m_external_subtitles_path = subtitles_path;
-      m_has_external_subtitles = true;
+      m_has_external_subtitles = false;
     }
   }
     
